@@ -1,7 +1,6 @@
 #pragma once
 
-class Version
-{
+class Version {
 public:
     static int getVersion();
 };

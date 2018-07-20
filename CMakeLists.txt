@@ -32,7 +32,7 @@ target_link_libraries(test_version
     otus_homework1_lib
 )
 
-install(TARGET otus_homework1 RUNTIME DESTINATION bin)
+install(TARGETS otus_homework1 RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 
