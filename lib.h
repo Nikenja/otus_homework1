@@ -1,6 +1,10 @@
 #pragma once
 
+#include <string>
+
+using namespace std;
+
 class Version {
 public:
-    static int getVersion();
+    static string getVersion();
 };
