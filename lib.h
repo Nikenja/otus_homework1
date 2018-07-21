@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include "version.h"
 
 using namespace std;
 
