@@ -1,6 +1,18 @@
 cmake_minimum_required(VERSION 3.2)
 
-project(otus_homework1 VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
+set(CMAKE_MODULES_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
+
+include(${CMAKE_MODULES_PATH}/GetGitRevisionDescription.cmake)
+
+git_describe(VERSION)
+message("Version " ${VERSION})
+
+
+# if(DEFINED ENV{TRAVIS_BUILD_NUMBER})
+#     project(otus_homework1 VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
+# else()
+#     project(otus_homework1 VERSION 0.0.1)
+# endif()
 
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
