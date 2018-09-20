@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Version {
+class Versioner {
 public:
     static string getVersion();
 };

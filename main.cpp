@@ -1,10 +1,10 @@
 #include <iostream>
-#include "lib.h"
+#include "versioner.h"
 
 using namespace std;
 
 int main() {
     cout << "Hello, World!" << endl;
-    cout << "Version: " << Version::getVersion() << endl;
+    cout << "Version: " << Versioner::getVersion() << endl;
     return 0;
 }

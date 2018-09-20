@@ -1,0 +1,9 @@
+#pragma once
+
+#include <string>
+
+using namespace std;
+
+const string PROJECT_VERSION_MAJOR = "@PROJECT_VERSION_MAJOR@";
+const string PROJECT_VERSION_MINOR = "@PROJECT_VERSION_MINOR@";
+const string PROJECT_VERSION_PATCH = "@PROJECT_VERSION_PATCH@";
