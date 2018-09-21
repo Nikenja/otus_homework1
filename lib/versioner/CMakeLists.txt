@@ -4,7 +4,7 @@ set(CMAKE_MODULES_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../cmake/modules)
 
 include(${CMAKE_MODULES_PATH}/GetGitRevisionDescription.cmake)
 
-git_describe(VERSION_FROM_GIT)
+git_describe(VERSION_FROM_GIT --long)
 
 string(REGEX REPLACE "^v([0-9]+)\\..*" "\\1" PROJECT_VERSION_MAJOR "${VERSION_FROM_GIT}")
 string(REGEX REPLACE "^v[0-9]+\\.([0-9]+).*" "\\1" PROJECT_VERSION_MINOR "${VERSION_FROM_GIT}")
