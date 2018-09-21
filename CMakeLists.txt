@@ -1,9 +1,12 @@
 cmake_minimum_required(VERSION 3.2)
 
-add_subdirectory(lib)
-add_subdirectory(test)
+project(otus_homework1)
 
-add_executable(otus_hw1 main.cpp lib/versioner.cpp)
+enable_testing()
+
+add_subdirectory(lib/versioner)
+
+add_executable(otus_hw1 main.cpp lib/versioner/versioner.cpp)
 
 set_target_properties(otus_hw1 PROPERTIES
     CXX_STANDARD 14
@@ -11,23 +14,11 @@ set_target_properties(otus_hw1 PROPERTIES
     COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
 )
 
-target_include_directories(otus_hw1 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include ${CMAKE_CURRENT_SOURCE_DIR}/lib)
+target_link_libraries(otus_hw1
+    versioner
+)
 
-# set_target_properties(test_version PROPERTIES
-#     COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
-#     INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
-# )
-
-# target_link_libraries(otus_homework1
-#     versioner
-# )
-
-# target_link_libraries(test_version
-#     ${Boost_LIBRARIES}
-#     versioner
-# )
-
-# install(TARGETS otus_homework1 RUNTIME DESTINATION bin)
+install(TARGETS otus_hw1 RUNTIME DESTINATION bin)
 
 # set(CPACK_GENERATOR DEB)
 
@@ -38,8 +29,3 @@ target_include_directories(otus_hw1 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include $
 # set(CPACK_PACKAGE_CONTACT Nikenja@yandex.com)
 
 # include(CPack)
-
-# enable_testing()
-
-# add_test(test_version test_version)
-
