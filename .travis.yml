@@ -10,4 +10,4 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
-  - ls -l
+  - ls -l | grep otus
