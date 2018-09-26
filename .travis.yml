@@ -10,5 +10,4 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
-  - FILE_NAME="$(ls | grep otus_homework1)"
-  - echo "FILE_NAME "${FILE_NAME}
+  - FILE_NAME="$(ls)"
