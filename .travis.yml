@@ -6,3 +6,8 @@ script:
 - cmake --build . -- -j8
 - cmake --build . --target test
 - cmake --build . --target package
+deploy:
+  provider: script
+  skip_cleanup: true
+  script:
+  - echo "otus_homework1-0.$PROJECT_VERSION_MINOR.$TRAVIS_BUILD_NUMBER-Linux.deb"
