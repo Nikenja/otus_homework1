@@ -10,4 +10,4 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
-  - echo "otus_homework1-0.$PROJECT_VERSION_MINOR.$TRAVIS_BUILD_NUMBER-Linux.deb"
+  - ls -l
