@@ -7,10 +7,10 @@ script:
 - cmake --build . --target test
 - cmake --build . --target package
 before_deploy:
-- export DEB_FILE_NAME=$(ls)
-- echo "DEB_FILE_NAME ${DEB_FILE_NAME}"
+- export DEB_FILE_NAME=$(ls *.deb)
 deploy:
   provider: script
+  file_glob: true
   skip_cleanup: true
   script:
   - ls
