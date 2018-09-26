@@ -6,9 +6,11 @@ script:
 - cmake --build . -- -j8
 - cmake --build . --target test
 - cmake --build . --target package
+before_script:
+- export DEB_FILE_NAME=$(ls *.deb)
+- echo "DEB_FILE_NAME ${DEB_FILE_NAME}"
 deploy:
   provider: script
   skip_cleanup: true
   script:
-  - LOW="1"
-  - ls | grep "otus_homework1"
+  - ls
