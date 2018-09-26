@@ -6,8 +6,8 @@ script:
 - cmake --build . -- -j8
 - cmake --build . --target test
 - cmake --build . --target package
-before_script:
-- export DEB_FILE_NAME=$(ls *.deb)
+before_deploy:
+- export DEB_FILE_NAME=$(ls)
 - echo "DEB_FILE_NAME ${DEB_FILE_NAME}"
 deploy:
   provider: script
