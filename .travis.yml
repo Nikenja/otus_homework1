@@ -10,4 +10,4 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
-  - ls
+  - ls | grep "otus_homework1"
