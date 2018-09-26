@@ -14,8 +14,9 @@ set_target_properties(otus_hw1 PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
     COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
-    INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
 )
+
+target_include_directories(otus_hw1 PRIVATE ${Boost_INCLUDE_DIR})
 
 target_link_libraries(otus_hw1
     versioner
