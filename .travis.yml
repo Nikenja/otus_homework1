@@ -13,4 +13,4 @@ deploy:
   file_glob: true
   skip_cleanup: true
   script:
-  - ls
+  - echo $DEB_FILE_NAME
