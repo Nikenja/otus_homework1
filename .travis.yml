@@ -13,4 +13,4 @@ deploy:
   file_glob: true
   skip_cleanup: true
   script:
-  - curl -T $DEB_FILE_NAME -u nikenja:$BINTRAY_API_KEY "https://api.bintray.com/content/nikenja/otus_homework/$DEB_FILE_NAME; deb_distribution=trusty; deb_component=main; deb_architecture=amd64; publish=1"
+  - curl -T $DEB_FILE_NAME -u nikenja:$BINTRAY_API_KEY "https://api.bintray.com/content/nikenja/otus_homework/1/$DEB_FILE_NAME; deb_distribution=trusty; deb_component=main; deb_architecture=amd64; publish=1"
