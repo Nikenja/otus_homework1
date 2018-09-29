@@ -8,7 +8,7 @@ set_target_properties(version_test PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
     COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
-    COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
+    # COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
 )
 
 target_link_libraries(version_test

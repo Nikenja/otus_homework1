@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.2)
 
 project(otus_homework1)
 
+set(Boost_USE_STATIC_LIBS   ON)
 find_package(Boost COMPONENTS program_options REQUIRED)
 
 enable_testing()
@@ -14,7 +15,6 @@ set_target_properties(otus_hw1 PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
     COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
-    COMPILE_DEFINITIONS BOOST_ALL_NO_LIB
 )
 
 target_include_directories(otus_hw1 PRIVATE ${Boost_INCLUDE_DIR})
