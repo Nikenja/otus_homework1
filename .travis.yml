@@ -13,6 +13,4 @@ deploy:
   file_glob: true
   skip_cleanup: true
   script:
-  - curl -T $DEB_FILE_NAME -unikenja:$BINTRAY_API_KEY "https://api.bintray.com/content/nikenja/otus_homework/hw1/$TRAVIS_BUILD_NUMBER/$DEB_FILE_NAME
-
-curl -T <FILE.EXT> -unikenja:<API_KEY> https://api.bintray.com/content/nikenja/otus_homework/<YOUR_COOL_PACKAGE_NAME>/<VERSION_NAME>/<FILE_TARGET_PATH>
+  - curl -T $DEB_FILE_NAME -unikenja:$BINTRAY_API_KEY "https://api.bintray.com/content/nikenja/otus_homework/hw1/$TRAVIS_BUILD_NUMBER/$DEB_FILE_NAME"
