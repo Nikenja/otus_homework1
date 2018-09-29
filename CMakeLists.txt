@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 3.2)
 
 project(otus_homework1)
 
-set(Boost_USE_STATIC_LIBS   ON)
 find_package(Boost COMPONENTS program_options REQUIRED)
 
 enable_testing()
@@ -14,6 +13,7 @@ add_executable(otus_hw1 main.cpp lib/versioner/versioner.cpp)
 set_target_properties(otus_hw1 PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
+    Boost_USE_STATIC_LIBS ON
     COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
 )
 
