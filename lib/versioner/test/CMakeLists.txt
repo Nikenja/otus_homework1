@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.2)
 
-set(Boost_USE_STATIC_LIBS   OFF)
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
 add_executable(version_test version_test.cpp)
